@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 import os
 import logging
 import random
@@ -14,8 +16,20 @@ logger = logging.getLogger(__name__)
 
 # CONFIG
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-GROUP_CHAT_ID = int(os.getenv("GROUP_CHAT_ID"))
-ADMIN_IDS = [int(x.strip()) for x in os.getenv("ADMIN_IDS").split(",")]
+if not BOT_TOKEN:
+    raise RuntimeError("BOT_TOKEN is not set")
+
+GROUP_CHAT_ID = os.getenv("GROUP_CHAT_ID")
+if not GROUP_CHAT_ID:
+    raise RuntimeError("GROUP_CHAT_ID is not set")
+GROUP_CHAT_ID = int(GROUP_CHAT_ID)
+
+ADMIN_IDS_RAW = os.getenv("ADMIN_IDS", "")
+if ADMIN_IDS_RAW:
+    ADMIN_IDS = [int(x.strip()) for x in ADMIN_IDS_RAW.split(",")]
+else:
+    ADMIN_IDS = []
+
 
 # DATA STORAGE
 predictions = {}

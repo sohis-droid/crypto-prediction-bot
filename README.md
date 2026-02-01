@@ -1,76 +1,41 @@
-\# 🎯 Crypto Prediction Bot
+# 🚀 Crypto Prediction Game Bot 🤖📊
 
+A **Telegram-based crypto prediction game bot** where users predict market movements, compete with others, and track real-time stats & leaderboards.
 
+Built for **performance, automation, and scalability**.
 
-Hourly crypto prediction game for Telegram groups.
+---
 
+## ✨ Features
 
+- 📈 Crypto price prediction games (Buy / Sell)
+- 🎯 Automated result calculation
+- 🧮 Win / loss tracking
+- 📊 24-hour stats & leaderboards
+- ⏱ Scheduled jobs using **JobQueue**
+- 🤖 Fully async Telegram bot (PTB v20+)
+- 🔐 Secure & lightweight architecture
 
-\## Features
+---
 
-\- ⏰ Hourly predictions (24/day)
+## 🧱 Tech Stack
 
-\- 🎮 Free to play
+- **Python** 3.10+
+- **python-telegram-bot** v20+
+- **APScheduler** (JobQueue)
+- **Requests** (price data)
+- **Railway** (deployment)
+- **GitHub** (CI/CD)
 
-\- 🏆 Points \& leaderboard
+---
 
-\- 🔥 Winning streaks
+## 📂 Project Structure
 
-\- 📊 Statistics tracking
-
-
-
-\## Setup
-
-
-
-\### Environment Variables
-
-```
-
-BOT\_TOKEN=your\_bot\_token
-
-GROUP\_CHAT\_ID=your\_group\_id
-
-ADMIN\_IDS=your\_user\_id
-
-```
-
-
-
-\### Deploy to Railway
-
-1\. Push to GitHub
-
-2\. Connect Railway to repo
-
-3\. Add environment variables
-
-4\. Deploy!
-
-
-
-\## Commands
-
-\- `/current` - Current prediction
-
-\- `/stats` - Your stats
-
-\- `/leaderboard` - Top 10 players
-
-
-
-\## Tech Stack
-
-\- Python 3.11
-
-\- python-telegram-bot 21.0
-
-\- CoinGecko API
-
-
-
-\## License
-
-MIT
-
+```text
+crypto-prediction-bot/
+│
+├── bot.py                 # Main bot logic
+├── config.py              # Tokens & settings
+├── requirements.txt       # Python dependencies
+├── README.md              # Documentation
+└── .gitignore
