@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-python-telegram-bot==21.0 
-requests 
-=======
 python-telegram-bot[job-queue]==21.0
 requests
->>>>>>> 01e3c7a (Add job-queue dependency)
